@@ -28,6 +28,8 @@
   "rules": {
     "quotes": ["error", "single"],
     "camelcase": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-duplicates": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [

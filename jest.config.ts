@@ -5,13 +5,16 @@ export default {
   coverageProvider: 'v8',
   setupFilesAfterEnv: ['<rootDir>.jest/setup.ts'],
   testEnvironment: 'jsdom',
+  modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
     '!src/**/stories.tsx',
     '!src/pages/**/*.tsx',
     '!src/styles/**/*.ts',
     '!src/assets/**/*.ts',
+    '!src/lib/**/*.ts',
     '!src/main.tsx',
+    '!src/App.tsx',
     '!src/vite-env.d.ts',
   ],
   transform: {

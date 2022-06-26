@@ -10,6 +10,7 @@ module.exports = {
     '@storybook/addon-viewport',
     '@storybook/addon-toolbars',
     'storybook-addon-pseudo-states',
+    'storybook-addon-apollo-client',
     {
       name: '@storybook/addon-postcss',
       options: {

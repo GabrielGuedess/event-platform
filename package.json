@@ -26,6 +26,10 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "date-fns": "^2.28.0",
+    "graphql": "^16.5.0",
+    "phosphor-react": "^1.4.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -76,6 +80,7 @@
     "plop": "^3.1.1",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
+    "storybook-addon-apollo-client": "^4.0.11",
     "storybook-addon-designs": "^6.3.1",
     "storybook-addon-pseudo-states": "^1.15.0",
     "storybook-dark-mode": "^1.1.0",
