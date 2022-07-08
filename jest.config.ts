@@ -9,6 +9,7 @@ export default {
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
     '!src/**/stories.tsx',
+    '!src/**/mock.ts',
     '!src/pages/**/*.tsx',
     '!src/styles/**/*.ts',
     '!src/assets/**/*.ts',
@@ -16,6 +17,7 @@ export default {
     '!src/main.tsx',
     '!src/App.tsx',
     '!src/Router.tsx',
+    '!src/graphql/**/*.ts',
     '!src/vite-env.d.ts',
   ],
   moduleNameMapper: {

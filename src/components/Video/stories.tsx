@@ -11,6 +11,12 @@ export default {
 
 export const Default: Story = () => (
   <MockedProvider mocks={mocks}>
-    <Video lessonSlug="Exg8YBHB02s" />
+    <Video lessonSlug="abertura-do-evento-ignite-lab" />
   </MockedProvider>
 );
+
+Default.parameters = {
+  apolloClient: {
+    mocks,
+  },
+};

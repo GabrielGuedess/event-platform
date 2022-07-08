@@ -35,7 +35,9 @@ describe('<Video />', () => {
     );
 
     expect(await screen.findByTestId(/Player/i)).toBeInTheDocument();
+
     expect(await screen.findByTestId(/Youtube/i)).toBeInTheDocument();
+
     expect(await screen.findByTestId(/DefaultUi/i)).toBeInTheDocument();
   });
 });
