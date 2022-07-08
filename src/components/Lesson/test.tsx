@@ -1,33 +1,38 @@
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 
 import { Lesson } from '.';
 
 describe('<Lesson />', () => {
   it('should render the heading in the component', () => {
-    const { container } = render(
-      <Lesson
-        key={1}
-        title="Lesson 1"
-        slug="lesson-1"
-        availableAt={new Date()}
-        lessonType="live"
-      />,
+    render(
+      <BrowserRouter>
+        <Lesson
+          key={1}
+          title="Lesson 1"
+          slug="lesson-1"
+          availableAt={new Date()}
+          lessonType="live"
+        />
+      </BrowserRouter>,
     );
 
     expect(screen.getByText(/Lesson 1/i)).toBeInTheDocument();
-
-    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render content status as "Em breve" based on date', () => {
     render(
-      <Lesson
-        key={1}
-        title="Lesson 1"
-        slug="lesson-1"
-        availableAt={new Date(new Date().setDate(new Date().getFullYear() - 5))}
-        lessonType="live"
-      />,
+      <BrowserRouter>
+        <Lesson
+          key={1}
+          title="Lesson 1"
+          slug="lesson-1"
+          availableAt={
+            new Date(new Date().setDate(new Date().getFullYear() - 5))
+          }
+          lessonType="live"
+        />
+      </BrowserRouter>,
     );
 
     expect(screen.getByText(/Em breve/i)).toBeInTheDocument();
@@ -35,13 +40,15 @@ describe('<Lesson />', () => {
 
   it('should render content status as "Conteúdo liberado" based on date', () => {
     render(
-      <Lesson
-        key={1}
-        title="Lesson 1"
-        slug="lesson-1"
-        availableAt={new Date()}
-        lessonType="live"
-      />,
+      <BrowserRouter>
+        <Lesson
+          key={1}
+          title="Lesson 1"
+          slug="lesson-1"
+          availableAt={new Date()}
+          lessonType="live"
+        />
+      </BrowserRouter>,
     );
 
     expect(screen.getByText('Conteúdo liberado')).toBeInTheDocument();
@@ -49,13 +56,15 @@ describe('<Lesson />', () => {
 
   it('should render class status as "AO VIVO" based on content type', () => {
     render(
-      <Lesson
-        key={1}
-        title="Lesson 1"
-        slug="lesson-1"
-        availableAt={new Date()}
-        lessonType="live"
-      />,
+      <BrowserRouter>
+        <Lesson
+          key={1}
+          title="Lesson 1"
+          slug="lesson-1"
+          availableAt={new Date()}
+          lessonType="live"
+        />
+      </BrowserRouter>,
     );
 
     expect(screen.getByText(/AO VIVO/i)).toBeInTheDocument();
@@ -63,13 +72,15 @@ describe('<Lesson />', () => {
 
   it('should render class status as "AULA PRÁTICA" based on content type', () => {
     render(
-      <Lesson
-        key={1}
-        title="Lesson 1"
-        slug="lesson-1"
-        availableAt={new Date()}
-        lessonType="class"
-      />,
+      <BrowserRouter>
+        <Lesson
+          key={1}
+          title="Lesson 1"
+          slug="lesson-1"
+          availableAt={new Date()}
+          lessonType="class"
+        />
+      </BrowserRouter>,
     );
 
     expect(screen.getByText(/AULA PRÁTICA/i)).toBeInTheDocument();

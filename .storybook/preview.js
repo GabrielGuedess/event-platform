@@ -1,4 +1,3 @@
-import { ApolloProvider } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { themes } from '@storybook/theming';
 import 'tailwindcss/tailwind.css';

@@ -1,3 +1,6 @@
+const path = require('path');
+const tsconfigPaths = require('vite-tsconfig-paths').default;
+
 module.exports = {
   stories: ['../src/components/**/stories.tsx'],
   addons: [
@@ -11,6 +14,7 @@ module.exports = {
     '@storybook/addon-toolbars',
     'storybook-addon-pseudo-states',
     'storybook-addon-apollo-client',
+    'storybook-addon-react-router-v6',
     {
       name: '@storybook/addon-postcss',
       options: {
@@ -26,5 +30,15 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+  },
+
+  viteFinal: async config => {
+    config.plugins.push(
+      tsconfigPaths({
+        projects: [path.resolve(path.dirname(__dirname), 'tsconfig.json')],
+      }),
+    );
+
+    return config;
   },
 };

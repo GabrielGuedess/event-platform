@@ -15,8 +15,12 @@ export default {
     '!src/lib/**/*.ts',
     '!src/main.tsx',
     '!src/App.tsx',
+    '!src/Router.tsx',
     '!src/vite-env.d.ts',
   ],
+  moduleNameMapper: {
+    '^.+\\.(css|less)$': '<rootDir>/.jest/CSSStub.js',
+  },
   transform: {
     '^.+\\.svg$': '<rootDir>/.jest/svgTransform.js',
     '^.+\\.(t|j)sx?$': [
