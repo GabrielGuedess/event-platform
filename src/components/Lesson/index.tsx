@@ -5,6 +5,13 @@ import ptBR from 'date-fns/locale/pt-BR';
 import { CheckCircle, Lock } from 'phosphor-react';
 import { Link, useParams } from 'react-router-dom';
 
+export interface ILessonProps {
+  title: string;
+  slug: string;
+  availableAt: Date;
+  lessonType: 'live' | 'class';
+}
+
 export function Lesson({ title, slug, availableAt, lessonType }: ILessonProps) {
   const { slug: slugUrl } = useParams<{ slug: string }>();
 
