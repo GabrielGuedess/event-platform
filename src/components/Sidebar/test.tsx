@@ -19,8 +19,6 @@ describe('<Sidebar />', () => {
       </MockedProvider>,
     );
 
-    expect(await screen.findAllByTestId('Lesson')).toHaveLength(
-      mocks[0].result.data.lessons.length,
-    );
+    expect(await screen.findAllByTestId('Lesson')).toHaveLength(2);
   });
 });

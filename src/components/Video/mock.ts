@@ -1,10 +1,11 @@
 /* eslint-disable quotes */
-import { GET_LESSON_BY_SLUG_QUERY } from '../../graphql/queries/lesson';
+
+import { GetLessonBySlugDocument } from 'graphql/generated';
 
 export const mocks = [
   {
     request: {
-      query: GET_LESSON_BY_SLUG_QUERY,
+      query: GetLessonBySlugDocument,
       variables: {
         slug: 'abertura-do-evento-ignite-lab',
       },

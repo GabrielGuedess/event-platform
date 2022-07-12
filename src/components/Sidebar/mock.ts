@@ -1,9 +1,9 @@
-import { GET_LESSONS_QUERY } from '../../graphql/queries/lessons';
+import { GetLessonsDocument } from 'graphql/generated';
 
 export const mocks = [
   {
     request: {
-      query: GET_LESSONS_QUERY,
+      query: GetLessonsDocument,
     },
     result: {
       data: {
